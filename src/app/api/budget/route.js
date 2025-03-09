@@ -20,6 +20,6 @@ export async function GET() {
         }
         return new Response(JSON.stringify({ budget: user.budget }), { status: 200 });
     } catch (error) {
-        return new Response(JSON.stringify({ error: "Invalid token" }), { status: 401 });
+        return new Response(JSON.stringify({ error: `Invalid token: ${error}` }), { status: 401 });
     }
 }
