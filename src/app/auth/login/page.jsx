@@ -8,12 +8,10 @@ export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
-    const [isLoading, setIsLoading] = useState(false);
     const router = useRouter();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setIsLoading(true);
         setError("");
 
         try {
@@ -32,8 +30,6 @@ export default function Login() {
             }
         } catch (err) {
             setError("Failed to connect to the server");
-        } finally {
-            setIsLoading(false);
         }
     };
 

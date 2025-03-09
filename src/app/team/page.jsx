@@ -35,7 +35,6 @@ const TeamPage = () => {
 
         fetchTeam();
 
-        // Socket.io setup
         socket.on("connect", () => {
             console.log("Socket connected");
         });

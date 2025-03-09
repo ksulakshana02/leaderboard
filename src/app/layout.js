@@ -1,4 +1,3 @@
-import {initSocket} from "@/lib/socket";
 import "./globals.css";
 import SideNavbar from "@/components/SideNavBar";
 

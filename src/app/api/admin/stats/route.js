@@ -5,7 +5,7 @@ import {verifyToken} from "@/lib/auth";
 import {calculatePoints, calculateValue} from "@/lib/points";
 import {cookies} from "next/headers";
 
-export async function GET(req) {
+export async function GET() {
     await connectDB();
     const cookieStore = await cookies();
     const token = cookieStore.get("token")?.value;
